@@ -19,10 +19,10 @@ if (process.env.NODE_ENV === "development") {
 
 app.get("/weather_forecast/:lat/:lon", (req, res) => {
   fetch(
-    `https://api.openweathermap.org/data/2.5/forecast?lat=${req.params.lat}&lon=${req.params.lon}&appid=${process.env.OPENWEATHERMAP_API_KEY}`
+    `https://api.openweathermap.org/data/2.5/forecast?mode=json&units=metric&lat=${req.params.lat}&lon=${req.params.lon}&appid=${process.env.OPENWEATHERMAP_API_KEY}`
   )
     .then((response) => response.json())
-    .then((result) => res.send(result))
+    .then((result) => res.json(result))
     .catch((err) => res.status(400).json({ error: err.message }));
 });
 
