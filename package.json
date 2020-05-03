@@ -5,8 +5,8 @@
   "main": "server/index.js",
   "scripts": {
     "dev": "concurrently \"npm:dev-server\" \"npm:dev-react\"",
-    "dev-server": "nodemon --watch server server/index.js",
-    "dev-react": "cd react-frontend && npm start"
+    "dev-server": "cross-env NODE_ENV=development nodemon --watch server server/index.js",
+    "dev-react": "cd react-frontend && cross-env NODE_ENV=development npm start"
   },
   "keywords": [
     "React",

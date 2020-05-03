@@ -2,11 +2,13 @@ const express = require("express");
 const cors = require("cors");
 const fetch = require("node-fetch");
 
-const envResult = require("dotenv").config();
+if (process.env.NODE_ENV === "development") {
+  const envResult = require("dotenv").config();
 
-if (envResult.error) {
-  console.error(envResult.error);
-  process.exit(1);
+  if (envResult.error) {
+    console.error(envResult.error);
+    process.exit(1);
+  }
 }
 
 const app = express();
