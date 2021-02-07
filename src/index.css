@@ -1,0 +1,124 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+}
+
+.form {
+  background-color: #ec4646;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-height: 500px;
+}
+
+.form__header-text {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.form__input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__city-name-input {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  margin-bottom: 18px;
+  outline: none;
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.form__city-name-input::placeholder {
+  color: white;
+  opacity: 1; /* firefox default to lower opacity */
+}
+
+/* Internet Explorer 10-11 */
+.form__city-name-input:-ms-input-placeholder {
+  color: white;
+}
+
+/* Microsoft Edge */
+.form__city-name-input::-ms-input-placeholder {
+  color: white;
+}
+
+.form__get-weather-button {
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+}
+
+.form__get-weather-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.form__get-weather-button:active {
+  opacity: 1;
+}
+
+.weather {
+  background-color: #f8dc81;
+  padding: 40px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.weather__header-text {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #314e52;
+}
+
+.weather__icon {
+  height: 300px;
+}
+
+.weather__footer-text {
+  font-size: 4rem;
+  font-weight: 400;
+  color: #314e52;
+}
+
+.weather__footer-text-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #314e52;
+}
+
+@media only screen and (min-width: 769px) {
+  .app {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    min-height: 100vh;
+  }
+}
